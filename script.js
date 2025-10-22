@@ -1,5 +1,7 @@
 "use strict";
-
+const prompt = require("prompt-sync")();
+console.log("------ Generate a random quote🧙‍♂️ ------");
+const randomNum = prompt("Pick a random number between 0 - 9: ");
 const quotesArr = [
   "An unexamined life is not worth living.",
   "Life is 10% what happens to you and 90% how you react to it.",
@@ -14,8 +16,8 @@ const quotesArr = [
 ];
 
 const randomQuote = () => {
-  let quote = quotesArr[Math.floor(Math.random() * quotesArr.length)];
-  return quote;
+  parseInt(randomNum);
+  return quotesArr[randomNum];
 };
 
 let generateQuote = randomQuote();
